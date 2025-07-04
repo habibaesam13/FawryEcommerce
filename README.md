@@ -60,7 +60,7 @@ The system is modular and easy to extend with payment gateways, UI, or databases
 
 ### ✅ 1. Successful Checkout
 
-![Successful Checkout](Screenshots/1_success_checkout.png)
+([Screenshots/1_success_checkout.png](https://github.com/habibaesam13/FawryEcommerce/blob/master/Screenshots/1_success_checkout.png))
 Displays checkout with subtotal, shipping, and updated balance.
 
 ---
