@@ -48,10 +48,47 @@ Subtotal 400
 Shipping 5.5
 Amount 405.5
 Remaining Balance: 594.5
-
-📌 Notes
+---
+### 📌 Notes
 The app uses console interaction (via Scanner) to let users resolve product issues at checkout.
 
 Shipping cost is calculated as 5 × totalWeight (customizable).
 
 The system is modular and easy to extend with payment gateways, UI, or databases.
+
+## 📸 Demo Screens
+
+### ✅ 1. Successful Checkout
+
+![Successful Checkout](Screenshots/1_success_checkout.png)
+Displays checkout with subtotal, shipping, and updated balance.
+
+---
+
+### ❌ 2. Expired Product
+
+![Expired Product](Screenshots/2_expired_product.png)
+Shows system preventing checkout of expired items.
+
+---
+
+### ⚠️ 3. Quantity Exceeds Stock
+
+![Quantity Exceeded](Screenshots/3_quantity_exceeds.png)
+Prompts user to update quantity, remove item, or cancel.
+
+---
+
+### 🧾 4. Insufficient Balance
+
+![Insufficient Balance](Screenshots/4.1_insufficient_balance.png)
+![Insufficient Balance](Screenshots/4.2_insufficient_balance.png)
+Alerts the user that they don’t have enough funds.
+
+---
+
+### 🚫 5. Empty Cart
+
+![Empty Cart](Screenshots/5_empty_cart.png)
+Prevents checkout when the cart is empty.
+
