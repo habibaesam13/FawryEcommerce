@@ -59,7 +59,7 @@ The system is modular and easy to extend with payment gateways, UI, or databases
 ## 📸 Demo Screens
 
 ### ✅ 1. Successful Checkout
-![Successful Checkout](Screenshots/1_success_checkout.png)
+<img src="Screenshots/1_success_checkout.png">
 Displays checkout with subtotal, shipping, and updated balance.
 
 ---
