@@ -60,34 +60,17 @@ The system is modular and easy to extend with payment gateways, UI, or databases
 ## 📸 Demo Screens
 
 ### ✅ 1. Successful Checkout
-![1_success_checkout](https://github.com/user-attachments/assets/ce1da277-8cd0-48bd-82b4-f702800de740)
-Displays checkout with subtotal, shipping, and updated balance.
+![Successful Checkout](Screenshots/1_success_checkout.png)
 
----
-
-### ❌ 2. Expired Productz
-
-![2_expired_product](https://github.com/user-attachments/assets/6d38f40a-33ee-4c29-9b89-16021b1903dd)
-Shows system preventing checkout of expired items.
-
----
+### ❌ 2. Expired Product
+![Expired Product](Screenshots/2_expired_product.png)
 
 ### ⚠️ 3. Quantity Exceeds Stock
-
-![3_quantity_exceeds](https://github.com/user-attachments/assets/fb172baf-803f-4ae5-a37d-65257a670c56)
-Prompts user to update quantity, remove item, or cancel.
-
----
+![Quantity Exceeds](Screenshots/3_quantity_exceeds.png)
 
 ### 🧾 4. Insufficient Balance
-![4 2_insufficient_balance](https://github.com/user-attachments/assets/78e2fff4-0962-4b0f-9615-296a85234598)
-![4 1_insufficient_balance](https://github.com/user-attachments/assets/242d6f96-bc06-43e8-83c4-2d02ef6d93b0)
-Alerts the user that they don’t have enough funds.
-
----
+![Insufficient Balance 1](Screenshots/4.1_insufficient_balance.png)
+![Insufficient Balance 2](Screenshots/4.2_insufficient_balance.png)
 
 ### 🚫 5. Empty Cart
-
-![5_empty_cart](https://github.com/user-attachments/assets/a4e1082c-e81e-400f-8917-eb6581a88e64)
-Prevents checkout when the cart is empty.
-
+![Empty Cart](Screenshots/5_empty_cart.png)
