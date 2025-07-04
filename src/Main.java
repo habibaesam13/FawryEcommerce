@@ -24,10 +24,10 @@ public class Main {
 
             // Setup Cart
             Cart cart = new Cart();
-            cart.addItem(cheese, 2);
-            cart.addItem(biscuits, 1);
-            cart.addItem(scratchCard, 1);
-            cart.addItem(cheeseRomy, 5);
+//            cart.addItem(cheese, 2);
+//            cart.addItem(biscuits, 1);
+//            cart.addItem(scratchCard, 1);
+//            cart.addItem(cheeseRomy, 1);
 
             // Customer
             Customer customer = new Customer("Alice", 1000, cart);

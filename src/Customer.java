@@ -105,16 +105,68 @@ public class Customer {
             System.out.println("All items were removed. Cart is empty.");
             return;
         }
+        double subtotal;
+        double shipping;
+        double total;
 
         // Step 2: Calculate subtotal and shipping
-        double subtotal = cart.getSubtotal();
-        double shipping = calculateShippingFees(cart.getShippableItems());
-        double total = subtotal + shipping;
+        while (true) {
+            subtotal = cart.getSubtotal();
+            shipping = calculateShippingFees(cart.getShippableItems());
+            total = subtotal + shipping;
 
-        if (balance < total) {
-            System.out.printf("⚠ Insufficient balance. Required: %.2f, Available: %.2f%n", total, balance);
-            return;
+            System.out.printf("Subtotal: %.2f | Shipping: %.2f | Total: %.2f | Your Balance: %.2f%n",
+                    subtotal, shipping, total, balance);
+
+            if (balance >= total) {
+                break;
+            }
+
+            System.out.println("Your balance is not enough to complete the checkout.");
+            System.out.println("Choose an option: [1] Update item quantity  [2] Remove item  [3] Cancel checkout");
+            System.out.println("Cart Items:");
+            for (int i = 0; i < cart.getItems().size(); i++) {
+                CartItem item = cart.getItems().get(i);
+                System.out.printf("[%d] %s x%d (%.2f)%n", i + 1,
+                        item.getProduct().getName(), item.getQuantity(), item.getTotalPrice());
+            }
+
+            System.out.print("Select item number to modify: ");
+            int selectedIndex = scanner.nextInt() - 1;
+
+            if (selectedIndex < 0 || selectedIndex >= cart.getItems().size()) {
+                System.out.println("Invalid selection.");
+                continue;
+            }
+
+            CartItem selectedItem = cart.getItems().get(selectedIndex);
+            System.out.println("Action: [1] Update quantity  [2] Remove item  [3] Cancel checkout");
+            int action = scanner.nextInt();
+
+            switch (action) {
+                case 1:
+                    System.out.print("Enter new quantity (max " + selectedItem.getProduct().getQuantity() + "): ");
+                    int newQty = scanner.nextInt();
+                    if (newQty > 0 && newQty <= selectedItem.getProduct().getQuantity()) {
+                        selectedItem.setQuantity(newQty);
+                    } else {
+                        System.out.println("Invalid quantity. No changes made.");
+                    }
+                    break;
+                case 2:
+                    cart.getItems().remove(selectedIndex);
+                    break;
+                case 3:
+                    System.out.println("Checkout canceled.");
+                    return;
+            }
+
+            if (cart.isEmpty()) {
+                System.out.println("Cart is now empty. Checkout canceled.");
+                return;
+            }
         }
+
 
         // Step 3: Process payment
         for (CartItem item : cart.getItems()) {
